@@ -1,13 +1,9 @@
+#!/bin/bash
 SECONDS=0
-cd /home/shizzle2889/scripts
-sh AICP.sh
-cd /home/shizzle2889/scripts
-sh AOKP.sh
-cd /home/shizzle2889/scripts
-sh xenonhd.sh
-cd /home/shizzle2889/scripts
-sh VOS.sh
-cd /home/shizzle2889/scripts
+. "AICP.sh"
+. "AOKP.sh"
+. "xenonhd.sh"
+. "VOS.sh"
 echo 'All appear to be completed. Please verify by checking the cloud.'
 if (( $SECONDS > 3600 )) ; then
     let "hours=SECONDS/3600"
